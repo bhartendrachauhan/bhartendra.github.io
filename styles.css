@@ -1,0 +1,44 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.phone{
+    background: no-repeat center url("/scooby.png") ;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #eee;
+    border-radius: 15px;
+    height: 600px;
+    width: 340px;
+}
+.mob-tab{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(221, 212, 212);
+    display: flex;
+    align-items: center;
+}
+.tabs{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    list-style-type: none;
+}
+.tabs a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: none;
+    color: rgb(70, 66, 66);
+    font-weight: 600;
+}
+.tabs a:hover{
+    color: rgb(228, 13, 174);
+}
+
