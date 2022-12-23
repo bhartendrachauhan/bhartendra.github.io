@@ -1,11 +1,13 @@
 body{
+    background-image: url("/res/background.jpg");
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    margin: 0;
 }
 .phone{
-    background: no-repeat center url("/scooby.png") ;
     position: relative;
     overflow: hidden;
     border: 3px solid #eee;
@@ -13,32 +15,45 @@ body{
     height: 600px;
     width: 340px;
 }
-.mob-tab{
+.phone .content{
+    opacity: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100%-60px);
+    width: 100%;
+}
+.content.show{
+    opacity: 1;
+}
+nav{
     position: absolute;
     bottom: 0;
+    left: 0;
+    margin-top: -5px;
     width: 100%;
-    height: 80px;
-    background-color: rgb(221, 212, 212);
-    display: flex;
-    align-items: center;
 }
-.tabs{
+nav ul{
+    background-color: white;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 60px;
     list-style-type: none;
 }
-.tabs a{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: none;
-    color: rgb(70, 66, 66);
-    font-weight: 600;
+nav li{
+    color: #777;
+    cursor: pointer;
+    flex:1;
+    padding: 10px;
+    text-align: center;
 }
-.tabs a:hover{
-    color: rgb(228, 13, 174);
+nav ul li p{
+    font-size: 12px;
+    margin: 2px 0;
+}
+nav ul li:hover, nav ul li.active{
+    color: #FF5F1F;
 }
 
